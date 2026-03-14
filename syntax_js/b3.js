@@ -3,4 +3,4 @@ const add = (a, b) =>{
     return console.log(x);
 };
 
-add(2,3);
+add(2,3);   
