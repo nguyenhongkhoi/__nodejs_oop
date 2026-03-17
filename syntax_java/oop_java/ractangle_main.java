@@ -1,6 +1,6 @@
 package syntax_java.oop_java;
 
-import java.util.Scanner;
+import java.util.*;
 
 class rectengle {
     private double length;
@@ -44,9 +44,6 @@ class rectengle {
 
 public class ractangle_main {
     public static void main(String[] args) {
-        rectengle a = new rectengle(122, 212);
-        a.show();
-        System.err.println(a.area());
 
     }
 }
