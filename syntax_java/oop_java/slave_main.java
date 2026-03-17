@@ -51,6 +51,10 @@ public class slave_main {
         return a >= b ? a : b;
     }
 
+    public static void sum(int a, int b) {
+        System.out.println(a + b);
+    }
+
     public static void main(String[] args) {
         slave so1 = new slave();
         slave so2 = new slave("Kien", 23);
@@ -59,5 +63,6 @@ public class slave_main {
         // int a = 5, b = 6;
         // System.err.println(max(a, b));
         System.err.println("slave " + so2.getName() + " chao dai ca!");
+        sum(100, 299);
     }
 }

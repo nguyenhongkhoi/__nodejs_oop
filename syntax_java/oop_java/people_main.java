@@ -2,21 +2,15 @@ package syntax_java.oop_java;
 
 import java.util.*;
 
-class people {
+class Person {
     private String name;
-    private int age;
+    private String gender;
 
-    // constructer
-    public people() {
-
-    }
-
-    public people(String name, int age) {
+    public Person(String name, String gender) {
         this.name = name;
-        this.age = age;
+        this.gender = gender;
     }
 
-    // getter setter
     public String getName() {
         return name;
     }
@@ -25,36 +19,53 @@ class people {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getGender() {
+        return gender;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    //
-    public void show() {
-        System.err.println("Name: " + name);
-        System.err.println("Age: " + age);
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Gender: " + gender);
+    }
+}
+
+class Student extends Person {
+    private int salary;
+
+    public Student(String name, String gender, int salary) {
+        super(name, gender);
+        this.salary = salary;
     }
 
-    public void scan() {
-        Scanner sc = new Scanner(System.in);
-        name = sc.next();
-        age = sc.nextInt();
+    public int getSalary() {
+        return salary;
+    }
 
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public void display() {
+        super.display();
+        System.out.println("Salary: " + salary);
     }
 
 }
 
 public class people_main {
-    public static void main(String[] args) {
-        people x1 = new people();
-        people x2 = new people("Kien", 29);
-        x1.show();
-        x2.show();
-
-        // sc.close();
+    public static void sum(int a, int b) {
+        System.out.println(a + b);
     }
+
+    public static void main(String[] args) {
+        Student s = new Student("Trung", "Male", 1700);
+        s.display();
+        System.out.println("sadd");
+        sum(100, 20);
+    }
+
 }
