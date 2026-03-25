@@ -55,7 +55,7 @@ class Student extends Person {
     }
 
 }
-
+@Service
 public class people_main {
     public static void sum(int a, int b) {
         System.out.println(a + b);
